@@ -14,7 +14,11 @@ struct LandmarksApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(ModelData())
+                .environmentObject(modelData)
         }
+        
+        #if os(watchOS)
+        WKNotificationScene(controller: NotificationController.self, category: "LandmarkNear")
+        #endif
     }
 }

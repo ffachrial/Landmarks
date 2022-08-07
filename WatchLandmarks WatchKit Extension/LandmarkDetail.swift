@@ -12,7 +12,7 @@ struct LandmarkDetail: View {
     var landmark: Landmark
     
     var landmarkIndex: Int {
-        modelData.landmarks.firstIndex(where: {$0.id == landmark.id})!
+        modelData.landmarks.firstIndex(where: { $0.id == landmark.id })!
     }
     
     var body: some View {
@@ -47,6 +47,7 @@ struct LandmarkDetail: View {
             .padding(16)
         }
         .navigationTitle("Landmarks")
+        .padding(.top, 0.3)
     }
 }
 
